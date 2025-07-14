@@ -196,6 +196,9 @@ function renderTask() {
         return;
       }
 
+      console.log("TODAY:", today);
+      console.log("DUE:", task.dueDate);
+
       if ((isOverdue || isDueToday) && !notified) {
         if (Notification.permission === "granted") {
           const message = isOverdue
@@ -310,10 +313,11 @@ if (logoutLink) {
 // responsive
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
-
-hamburger.addEventListener("click", () => {
-  menu.classList.toggle("show");
-});
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+}
 
 function scrollToSection(id) {
   const status = document.getElementById(id);
