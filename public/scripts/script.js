@@ -168,7 +168,8 @@ function renderTask() {
     let countOverDue = 0;
 
     const filter = document.getElementById("filter")?.value || "all";
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
+
     let notified = sessionStorage.getItem("notifiedToday") === "true";
 
     let tasksShown = {
