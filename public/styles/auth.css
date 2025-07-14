@@ -109,8 +109,8 @@ button {
 
 @media (max-width: 720px) {
   .container {
-    margin: 10rem auto;
-    width: 400px;
+    margin: 5rem auto;
+    width: 350px;
     padding: 25px;
   }
 
