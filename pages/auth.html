@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth | Task Tracker</title>
+    <link rel="stylesheet" href="/styles/auth.css" />
+    <link rel="icon" href="/img/logo.png" />
+  </head>
+  <body>
+    <div id="toast" class="toast"></div>
+    <div class="container">
+      <div class="title">
+        <h2>Welcome to Task Tracker</h2>
+        <img src="/img/logo.png" class="logo" />
+      </div>
+      <div class="form-wrapper" id="formWrapper">
+        <h1 id="auth-title">Log in 🔑</h1>
+        <div class="form-inner">
+          <!-- Login Form -->
+          <form id="loginForm">
+            <label class="form-control">
+              Name:
+              <input type="text" id="loginName" required />
+            </label>
+            <label class="form-control">
+              Password:
+              <input type="password" id="loginPassword" required />
+            </label>
+            <button type="submit">Login</button>
+          </form>
+
+          <!-- Register Form -->
+          <form id="registerForm">
+            <label class="form-control">
+              Name:
+              <input type="text" id="registerName" required />
+            </label>
+            <label class="form-control">
+              Password:
+              <input type="password" id="registerPassword" required />
+            </label>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+
+      <p id="switchLink">
+        No account? <a href="#" id="toggleForm">Register</a>
+      </p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>
+    <script src="/config/fb.js"></script>
+    <script src="/scripts/auth.js"></script>
+  </body>
+</html>

@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Smart Task Tracker </title>
-        <link rel="stylesheet" href="styles.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading.....</title>
+    <link rel="stylesheet" href="./styles/splash.css" />
+  </head>
+  <body>
+    <audio id="splashSound" src="./sound/sound-intro.wav"></audio>
+    <div class="splash-container">
+      <img src="./img/logo.png" class="logo" />
+      <div class="title">Task Tracker</div>
+    </div>
 
-    </head>
-    <body>
-        <header>
-            <div class="title">
-                <h1>Smart Task Tracker</h1>
-            </div>
-        </header>
-        <section>
-        <div class="body">
-            <div class="title-box" >
-                <h1 class="title-work">Time to Work</h1>
-            </div>
-            <form id="taskForm">
-                <label> Title: <input type="text" id="title" placeholder="Task Title" required /></label>
-                <label> Due Date:<input type="date" id="dueDate" required /></label>
-                <label>Note:<textarea id="description" placeholder="Description" required></textarea></label>
-                <div class="buttons">
-                    <a href="./task.html" class="check-task">Check Task</a>
-                    <button class="submit" type="submit">Add Task</button>
-                </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const sound = document.getElementById("splashSound");
+        if (sound) {
+          sound.play().catch((e) => {
+            console.warn("Autoplay failed:", e);
+          });
+        }
 
-
-                
-              </form>
-        </div>
-        </section>
-
-
-
-        <script src="./script.js"></script>
-    </body>
+        setTimeout(() => {
+          window.location.href = "/pages/auth.html";
+        }, 5000);
+      });
+    </script>
+  </body>
 </html>

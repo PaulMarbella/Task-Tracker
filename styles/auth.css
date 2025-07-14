@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: url("/img/Gemini_Generated_Image_zfmr75zfmr75zfmr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  place-items: center;
+  gap: 3em;
+  background: linear-gradient(135deg, #eae1c4 0%, #d4c8a6 100%);
+  width: 550px;
+  padding: 25px;
+  border: 10px solid;
+  box-shadow: 1px 11px 21px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form-control {
+  display: block;
+  margin-bottom: 2em;
+}
+
+.toast {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4f;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, top 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  top: 275px;
+  pointer-events: auto;
+}
+
+.form-wrapper {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.form-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200%;
+}
+form {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.slide-register .form-inner {
+  transform: translateX(-50%);
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #98b19c;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 10rem auto;
+    width: 400px;
+    padding: 25px;
+  }
+
+  .toast {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    padding: 10px;
+  }
+
+  .toast.show {
+    opacity: 1;
+    top: 285px;
+    pointer-events: auto;
+  }
+}
